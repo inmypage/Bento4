@@ -685,7 +685,7 @@ def OutputHlsCommon(options, track, all_tracks, media_subdir, playlist_name, med
 
     playlist_file = open(path.join(options.output_dir, media_subdir, playlist_name), 'w', newline='\r\n')
     playlist_file.write('#EXTM3U\n')
-    playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
+    # playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
     playlist_file.write('#\n')
     playlist_file.write('#EXT-X-VERSION:6\n')
     playlist_file.write('#EXT-X-PLAYLIST-TYPE:VOD\n')
@@ -741,7 +741,7 @@ def OutputHlsWebvttPlaylist(options, media_subdir, media_playlist_name, media_fi
     # output a playlist with a single segment that covers the entire WebVTT file
     playlist_file = open(path.join(options.output_dir, media_subdir, media_playlist_name), 'w', newline='\r\n')
     playlist_file.write('#EXTM3U\n')
-    playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
+    # playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
     playlist_file.write('#\n')
     playlist_file.write('#EXT-X-VERSION:6\n')
     playlist_file.write('#EXT-X-INDEPENDENT-SEGMENTS\n')
@@ -1011,7 +1011,7 @@ def OutputSmooth(options, audio_tracks, video_tracks):
                                   MinorVersion="0",
                                   TimeScale="10000000",
                                   Duration=str(int(round(presentation_duration*10000000.0))))
-    client_manifest.append(xml.Comment(' Created with Bento4 mp4-dash.py, VERSION='+VERSION+'-'+SDK_REVISION+' '))
+    # client_manifest.append(xml.Comment(' Created with Bento4 mp4-dash.py, VERSION='+VERSION+'-'+SDK_REVISION+' '))
 
     # process the audio tracks
     for audio_track in audio_tracks:
