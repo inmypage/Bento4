@@ -354,7 +354,7 @@ def OutputHls(options, media_sources):
     # start the master playlist
     master_playlist = open(path.join(options.output_dir, options.master_playlist_name), 'w', newline='\r\n')
     master_playlist.write('#EXTM3U\n')
-    master_playlist.write('# Created with Bento4 mp4-hls.py version '+VERSION+'r'+SDK_REVISION+'\n')
+    # master_playlist.write('# Created with Bento4 mp4-hls.py version '+VERSION+'r'+SDK_REVISION+'\n')
 
     if options.hls_version >= 4:
         master_playlist.write('\n')
