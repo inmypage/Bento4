@@ -428,7 +428,7 @@ def OutputDash(options, set_attributes, audio_sets, video_sets, subtitles_sets, 
                       minBufferTime="PT%.02fS" % options.min_buffer_time,
                       mediaPresentationDuration=XmlDuration(presentation_duration),
                       type='static')
-    mpd.append(xml.Comment(' Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION + ' '))
+    # mpd.append(xml.Comment(' Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION + ' '))
     period = xml.SubElement(mpd, 'Period')
 
     # process the video tracks
@@ -826,7 +826,7 @@ def OutputHls(options, set_attributes, audio_sets, video_sets, subtitles_sets, s
 
     master_playlist_file = open(path.join(options.output_dir, options.hls_master_playlist_name), 'w', newline='\r\n')
     master_playlist_file.write('#EXTM3U\n')
-    master_playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
+    # master_playlist_file.write('# Created with Bento4 mp4-dash.py, VERSION=' + VERSION + '-' + SDK_REVISION+'\n')
     master_playlist_file.write('#\n')
     master_playlist_file.write('#EXT-X-VERSION:6\n')
     master_playlist_file.write('\n')
