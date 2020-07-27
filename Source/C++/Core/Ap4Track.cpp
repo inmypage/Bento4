@@ -80,7 +80,7 @@ AP4_Track::AP4_Track(Type             type,
 
         case TYPE_VIDEO:
             hdlr_type = AP4_HANDLER_TYPE_VIDE;
-            hdlr_name = "Bento4 Video Handler";
+            hdlr_name = "my@page Video Handler";
             break;
 
         case TYPE_HINT:
@@ -149,7 +149,7 @@ AP4_Track::AP4_Track(AP4_SampleTable* sample_table,
 
         case TYPE_VIDEO:
             hdlr_type = AP4_HANDLER_TYPE_VIDE;
-            hdlr_name = "Bento4 Video Handler";
+            hdlr_name = "my@page Video Handler";
             break;
 
         case TYPE_HINT:
